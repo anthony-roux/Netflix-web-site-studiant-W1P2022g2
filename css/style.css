@@ -1,137 +1,450 @@
 /* GENERAL PROPERTY */
 
 body {
-    background-color:black;
-    color: white;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+  background-color: black;
+  color: white;
+  /* margin-bottom: 20px; */
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
 }
 
+input {
+  display: none;
+}
+
+/* FONTS IMPORTATIONS */
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/Netflix-web-site-studiant-W1P2022g2/css/fonts/Playfair/PlayfairDisplay-Regular.ttf")
+    format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fauna One";
+  src: url("/Netflix-web-site-studiant-W1P2022g2/css/fonts/FaunaOne-Regular.ttf")
+    format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* HOME PAGE */
 
-.background {
-    width: 100%;
-    height: 100vh;
-    color: black;
-    background: linear-gradient(-90deg, rgb(0, 0, 0), rgb(68, 16, 0), rgb(0, 0, 0), rgb(73, 18, 1) );
-    background-size: 400% 400%;
-    position: relative;
-    animation: change 10s ease-in-out infinite;
+.backgroundHomePage {
+  /* width: 100%;
+    min-height: 100vh; */
+  color: black;
+  background: linear-gradient(
+    -90deg,
+    rgb(0, 0, 0),
+    rgb(68, 16, 0),
+    rgb(0, 0, 0),
+    rgb(73, 18, 1)
+  );
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite;
 }
-
 
 @keyframes change {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 50% 100%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
 }
 
-.logoNetflix {
-    margin: 80px auto; 
-    width: 1000px;
-    text-shadow: 10px 5px 5px black;
+.sectionHomePage {
+  display: flex;
+  justify-content: center;
 }
 
-.accueil {
+/* MEDIA QUERIES > 425PX - MOBILE S M L */
+
+@media (max-width: 425px) {
+  .logoNetflixHomePage {
+    display: flex;
+    margin: 15% auto 15%;
+    width: 95%;
+  }
+
+  .buttonClicHomePage {
+    display: flex;
+    width: 130px;
+    height: 130px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 25% auto;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .powerHomePage {
+    display: flex;
+    width: 100%;
+    margin: 5px auto 0;
+  }
+
+  .divTitleHomePage {
+    background: rgba(0, 0, 0, 0.384);
+    margin: 30% auto 12%;
+    width: 70%;
+    box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -webkit-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -moz-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    border: 14px double #00000048;
+    /* border: 13px double#00000048; */
+  }
+
+  .titleHomePage {
     text-align: center;
+    font-family: "Playfair Display";
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(202, 1, 1) 3px 2px 2px;
+    line-height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  .pressPower {
+    font-size: 30px;
+  }
+
+  .angleDown {
+    width: 100%;
+    display: none;
+  }
 }
 
+/* MEDIA QUERIES A PARTIR DE 426PX - LARGE MOBILE + TABLET*/
 
-.title1 {
+@media (min-width: 426px) {
+  .logoNetflixHomePage {
+    display: flex;
+    margin: 10% auto 4%;
+    width: 90%;
+  }
+
+  .titleHomePage {
     text-align: center;
-    font-family: Playfair Display;
+    font-family: "Playfair Display";
+    font-weight: normal;
+    font-style: normal;
     text-transform: uppercase;
     font-size: 30px;
     line-height: 60px;
-    margin: 90px 0;
-    color: white;
-    text-shadow: rgb(15, 0, 0) 3px 2px 2px;
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(202, 1, 1) 3px 2px 2px;
+  }
 
+  .divTitleHomePage {
+    background: rgba(0, 0, 0, 0.384);
+    margin: 30% auto 12%;
+    max-width: 380px;
+    box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -webkit-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -moz-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    border: 14px double #00000048;
+  }
+
+  .pressPower {
+    font-size: 45px;
+  }
+
+  .buttonClicHomePage {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 20% auto;
+  }
+
+  .buttonClicHomePage:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 5% auto;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(
+      -65deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.699),
+      rgb(255, 255, 255),
+      rgba(0, 0, 0, 0.274)
+    );
+    background-size: 200% 200%;
+    animation: change 4s ease-in infinite;
+  }
+
+  .powerHomePage {
+    display: flex;
+    width: 100%;
+    margin: 5px auto 0;
+  }
+
+  .angleDown {
+    width: 100%;
+    display: none;
+  }
 }
 
-.buttonClick {
-    background-color: rgba(255, 255, 255, 0.082);
-    width: 130px;
-    height: 50px;
-    margin: 0 auto;
-    border: 2px solid rgb(0, 0, 0);
+/* MEDIA QUERIES < 1024PX - LAPTOP + LAPTOP LARGE*/
+
+@media (min-width: 1024px) {
+  .logoNetflixHomePage {
+    display: flex;
+    margin: 10% auto 4%;
+    width: 90%;
+  }
+
+  .divTitleHomePage {
+    margin: 40% auto 12%;
+    max-width: 440px;
+    max-height: 250px;
+    box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -webkit-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    -moz-box-shadow: -1px -1px 77px 11px rgba(171, 6, 6, 0.58);
+    border-radius: 29px 29px 29px 29px;
+    -webkit-border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+    border: 14px double #00000048;
+  }
+
+  .titleHomePage {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 80px;
+    margin: 10px 0;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(202, 1, 1) 3px 2px 2px;
+  }
+
+  .pressPower {
+    font-size: 50px;
+  }
+
+  .buttonClicHomePage {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 5% auto;
+  }
+
+  .buttonClicHomePage:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 5% auto;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(
+      -65deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.699),
+      rgb(255, 255, 255),
+      rgba(0, 0, 0, 0.274)
+    );
+    background-size: 200% 200%;
+    animation: change 4s ease-in infinite;
+  }
+
+  .powerHomePage {
+    display: flex;
+    width: 100%;
+    margin: 5px auto 0;
+  }
+
+  .linkAncreHomePage {
+    background: white;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 5% auto;
+  }
+
+  .linkAncreHomePage:hover {
+    
+    background: white;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 60px auto;
+  }
+
+  .angleDown {
+    width: 100%;
+    display: initial;
+  }
+
+  .angleDown:hover {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(
+      -65deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.699),
+      rgb(255, 255, 255),
+      rgba(0, 0, 0, 0.274)
+    );
+    background-size: 200% 200%;
+    animation: change 4s ease-in infinite;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px; 
+    
+  }
 }
 
-.buttonClick:hover {
-    width: 130px;
-    height: 50px;
-    margin: 0 auto;
-    border: 2px solid rgb(0, 0, 0);
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255), rgba(0, 0, 0, 0) );
-    background-size: 400% 400%;
-    position: relative;
-    animation: change 2s ease-in infinite;
-}
+@media (min-width: 1200px) {
+  .linkAncreHomePage {
+    background: white;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 5% auto;
+  }
 
+  .linkAncreHomePage:hover {
+    
+    background: white;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    background: #ffffff;
+    border: 10px double #000000;
+    justify-content: center;
+    margin: 60px auto;
+  }
+
+  .angleDown {
+    width: 100%;
+    display: initial;
+  }
+
+  .angleDown:hover {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(
+      -65deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(255, 255, 255, 0.699),
+      rgb(255, 255, 255),
+      rgba(0, 0, 0, 0.274)
+    );
+    background-size: 200% 200%;
+    animation: change 4s ease-in infinite;
+    border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px; 
+    
+  }
+}
 
 @keyframes change {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 50% 100%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
 }
-
-
-.link1 {
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    font-family: Playfair Display;
-    font-weight: bolder;
-    text-transform: uppercase;
-    margin: 70px 0;
-    line-height: 50px;
-}
-
 
 /* MAIN PAGE  */
 
-
-.buttonLink {
-    height: 150px;
-    width: 100vw;
+.navBar {
+  height: 150px;
+  width: 100vw;
 }
 
-.buttonLink img {
-    padding: 30px;
-    width: 70px;
-    height: 80px;
+.navBar img {
+  padding: 30px;
+  width: 70px;
+  height: 80px;
 }
 
-.buttonLink img:hover {
-    padding: 30px;
-    width: 75px;
-    height: 85px;
+.navBar img:hover {
+  padding: 30px;
+  width: 75px;
+  height: 85px;
 }
 
-.top h1 {
-    text-align: center;
-    font-family: Playfair Display;
-    text-transform: uppercase;
-    font-size: 30px;
-    line-height: 60px;
-    padding: 50px 0;
-    text-shadow: rgb(202, 1, 1) 3px 2px 2px;
+.sectionMainPage h1 {
+  text-align: center;
+  font-family: Playfair Display;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 60px;
+  padding: 50px 0;
+  text-shadow: rgb(202, 1, 1) 3px 2px 2px;
 }
-
 
 /* 
 .listAffiches {
@@ -171,31 +484,35 @@ figcaption {
     line-height: 20px;
 } */
 
-
-
-
-
 /* SERIES CARDS */
 
-
-.cards {
-    display: flex;
-    flex-flow: row wrap;    
-    justify-content: center;
+.poster {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.front {
-    margin: 50px;
-    width: 420px;
-    height: 600px;
-    font-family: Playfair Display;
-    border-radius: 50px;
+.frontPoster {
+  margin: 50px;
+  width: 420px;
+  height: 600px;
+  font-family: Playfair Display;
+  border-radius: 50px;
 }
 
-.front img {
-    width: 420px;
-    height: 600px;
-    border-radius: 50px;
-    border: 2px solid rgb(136, 6, 6);
+.frontPoster img {
+  width: 420px;
+  height: 600px;
+  border-radius: 50px;
+  border: 2px solid rgb(136, 6, 6);
 }
 
+.bottomOfPage {
+  width: 100%;
+  height: 300px;
+  margin: 200px 0 0 0;
+  background-color: rgba(136, 6, 6, 0.63);
+  box-shadow: -1px 148px 400px -62px rgba(0, 0, 0, 1) inset;
+  -webkit-box-shadow: -1px 148px 400px -62px rgba(0, 0, 0, 1) inset;
+  -moz-box-shadow: -1px 148px 400px -62px rgba(0, 0, 0, 1) inset;
+}
