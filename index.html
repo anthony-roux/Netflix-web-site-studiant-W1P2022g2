@@ -6,18 +6,51 @@
   <title>Site Web - accueil</title>
   <meta charset="UTF-8">
   <meta name="Netflix contents" content="Un super site sur des series Netflix">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/reset.css" type="text/css" rel="stylesheet" media="screen" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+  <script href="netflix-web-site-studiant-w1p2022g2/javascriptjs" type="text/js"></script>
 </head>
 
-<body class="background">
-  <section>
+<body class="backgroundHomePage">
+  <section class="sectionHomePage">
     <article class="accueil">
-      <img class="logoNetflix" src="images/Netflix-Logo.png" alt="logo netflix">
-      <h1 class="title1">Trouvez la <strong>série</strong> qui animera votre soirée...</h1>
+      <img class="logoNetflixHomePage" src="images/Netflix-Logo.png" alt="logo netflix">
+    <div class="linkAncreHomePage">
+      <a href="#linkAncrePower">
+        <img class="angleDown" class="shake-hard" src="images/Orion_angle-down.svg" alt="angleDownLink">
+      </a>
+    </div>
 
-      <div class="buttonClick">
-        <a class="link1" href="product.html" title="Netflix and Chill here !" target="_blank">Click here</a>
+    <div class="divTitleHomePage">
+      <h1 class="titleHomePage">If you are curious <br><strong class="pressPower">press power</strong></h1>
+    </div>  
+
+
+      <div class="buttonClicHomePage">
+        <a class="linkClicHereHomePage" href="product.html" title="Netflix and Chill here !" target="_blank">
+          <img class="powerHomePage" id="linkAncrePower" src="images/Orion_shutdown.svg" alt="Appuyez ici">       
+          <audio class="jingleNetflix" autoplay="false" id="beep" src="audio/netflix-logo-animation-2013.mp3">
+          </audio>
+          <input type="button" onclick="JouerSon()" />
+
+          <script>
+              function JouerSon() {
+                      var sound = document.getElementById("beep");
+                      sound.play();
+                  }
+          </script>
+
+        </a>
+        <audio class="jingleNetflix" autoplay="false" id="beep" src="audio/netflix-logo-animation-2013.mp3">
+        </audio>
+        <input type="button" value="Cliquer pour un beep" onclick="JouerSon()" />
+        <script>
+            function JouerSon() {
+                    var sound = document.getElementById("beep");
+                    sound.play();
+                }
+        </script>
       </div>
     </article>
 
